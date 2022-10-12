@@ -4,6 +4,7 @@
   src: local('Nekst-Black'),
        url('../fonts/Nekst-Black.woff2') format('woff2'),
        url('../fonts/Nekst-Black.woff') format('woff');
+  font-display: swap;
 }
 
 @font-face {
@@ -12,6 +13,7 @@
   src: local('Gilroy-Regular'),
        url('../fonts/Gilroy-Regular.woff2') format('woff2'),
        url('../fonts/Gilroy-Regular.woff') format('woff');
+  font-display: swap;
 }
 
 body {
