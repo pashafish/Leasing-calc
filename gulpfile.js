@@ -19,7 +19,7 @@ const html = () => {
     collapseWhitespace: true,
     removeComments: true
   }))
-  .pipe(dest('dist/'))
+  .pipe(dest('docs/'))
   .pipe(browserSync.stream())
 }
 
@@ -32,36 +32,36 @@ const sassToCss = () => {
   .pipe(cleanCSS({
     level: 2
   }))
-  .pipe(dest('dist/css'))
+  .pipe(dest('docs/css'))
   .pipe(browserSync.stream())
 }
 
 const clean = () => {
-  return del(['dist'])
+  return del(['docs'])
 }
 
 const plugins = () => {
   return src('src/plugins/**/*')
-  .pipe(dest('dist/plugins'))
+  .pipe(dest('docs/plugins'))
   .pipe(browserSync.stream())
 }
 
 const fonts = () => {
   return src('src/fonts/**/*')
-  .pipe(dest('dist/fonts'))
+  .pipe(dest('docs/fonts'))
   .pipe(browserSync.stream())
 }
 
 const img = () => {
   return src('src/img/**/*')
-  .pipe(dest('dist/img'))
+  .pipe(dest('docs/img'))
   .pipe(browserSync.stream())
 }
 
 const watchFiles = () => {
   browserSync.init({
     server: {
-      baseDir: 'dist'
+      baseDir: 'docs'
     }
   })
 }
