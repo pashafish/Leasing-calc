@@ -1,0 +1,70 @@
+$bg-color: #fff;
+$primary-color: #FF9514;
+$input-bg-color: #F3F3F4;
+$input-bg-darker-color: #ebebec;
+$text-darkest-color: #111;
+$text-medium-color: #333;
+$text-lightest-color: #575757;
+$text-white-color: #fff;
+$slider-bg-color: #e1e1e1;
+$button-active-color: #111;
+$button-hover-color: #575757;
+$button-disabled-color: rgba(255, 149, 20, 0.4);
+
+
+:root {
+  font-size: 16px;
+  --header-font-size: 3.375rem;
+  --input-font-size: 1.875rem;
+  --input-sm-font-size: 1.25rem;
+  --result-font-size: 3.375rem;
+  --container-max-width: 1345px;
+  --container-padding: 48px;
+  --container-v-padding: 64px;
+  --columns-count: 12;
+  --column-gap: 32px;
+  --header-col-count: 8;
+  --label-col-count: 4;
+  --button-col-count: 4;
+  --result-col-count: 4;
+  --slider-dot-size: 20px;
+
+  @media (min-width: 1440px) {
+    --container-max-width: 100%;
+    font-size: calc(16px / 1440px * 100vw);
+    --container-padding: 3.3vw;
+    --slider-dot-size: 1.39vw;
+  }
+
+  @media (max-width: 1119.98px) {
+    --container-padding: 36px;
+    --container-max-width: 696px;
+    --columns-count: 4;
+    --header-col-count: 4;
+    --label-col-count: 4;
+    --button-col-count: 2;
+    --result-col-count: 2;
+  }
+
+  @media (max-width: 767.98px) {
+    font-size: 14px;
+    --header-font-size: 2.43rem;
+    --input-font-size: 1.57rem;
+    --input-sm-font-size: 1.57rem;
+    --result-font-size: 1.57rem;
+    --container-padding: 21px;
+    --container-v-padding: 44px;
+    --container-max-width: 100%;
+    --columns-count: 2;
+    --header-col-count: 2;
+    --label-col-count: 2;
+    --button-col-count: 2;
+    --result-col-count: 2;
+  }
+
+  @media (max-width: 319.98px) {
+    font-size: calc(14px / 320px * 100vw);
+    --container-padding: 6.5625vw;
+    --slider-dot-size: max(6.25vw, 4px);
+  }
+}

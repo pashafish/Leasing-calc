@@ -1,0 +1,67 @@
+@font-face {
+  font-family: 'Nekst';
+  font-weight: 900;
+  src: local('Nekst-Black'),
+       url('../fonts/Nekst-Black.woff2') format('woff2'),
+       url('../fonts/Nekst-Black.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  font-weight: 400;
+  src: local('Gilroy-Regular'),
+       url('../fonts/Gilroy-Regular.woff2') format('woff2'),
+       url('../fonts/Gilroy-Regular.woff') format('woff');
+}
+
+body {
+  background-color: $bg-color;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.btn-reset {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(var(--columns-count), 1fr);
+  gap: 2rem var(--column-gap);
+  max-width: calc(var(--container-max-width) + var(--container-padding) * 2);
+  padding: var(--container-v-padding) var(--container-padding);
+}
+
+.notification {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  display: inline-block;
+  max-width: 90%;
+  padding: 1rem;
+  transform: translateX(-50%);
+  background-color: $primary-color;
+  border-radius: 0 0 1.5rem 1.5rem;
+  font-family: 'Nekst', Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  font-size: 1.2rem;
+  line-height: 1;
+  color: $text-white-color;
+  z-index: 1000;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
