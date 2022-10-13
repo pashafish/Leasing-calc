@@ -178,11 +178,7 @@ class Calc extends React.Component {
       width: targetSliderGuide.getBoundingClientRect().right - targetSliderGuide.getBoundingClientRect().left,
     }
     let sliderPercent = 0;
-    if(e.type === 'mousemove') {
-      sliderPercent = (e.pageX - sliderGuideCoords.left) / sliderGuideCoords.width;
-    } else {
-      sliderPercent = (e.touches[0].pageX - sliderGuideCoords.left) / sliderGuideCoords.width;
-    }
+    sliderPercent = ((e.pageX ?? e.touches[0]?.pageX ?? 0) - sliderGuideCoords.left) / sliderGuideCoords.width;
     sliderPercent = sliderPercent < 0 ? 0 : sliderPercent > 1 ? 1 : sliderPercent;
     let value = this.state.value;
     let formatedValue = this.state.formatedValue;
